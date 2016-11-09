@@ -11,7 +11,7 @@ function checkPalindrom(str) {
 ###输出: [1,13,24,11,14,2]
 ###需要去掉重复的11 和 1 这两个元素。
 ```javascript
-  var arr=[1,13,24,11,11,14,1,2];
+  	var arr=[1,13,24,11,11,14,1,2];
 	var arr1=[];
 	var hashArr=[];
 	for(var i=0;i<arr.length;i++)
