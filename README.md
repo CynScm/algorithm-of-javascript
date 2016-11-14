@@ -22,3 +22,35 @@ function checkPalindrom(str) {
 	}
 	console.log(arr1);
 ```
+##Q3 统计一个字符串出现最多的字母
+###给出一段英文连续的英文字符窜，找出重复出现次数最多的字母
+###输入：afjghdfraaaasdenas 
+###输出：a
+```javascript
+	function maxDuplicateChar(str){
+		if(str.length==1){
+			return str;
+		}
+		let charObj={};
+		for(let i=0;i<str.length;i++){
+			if(!charObj[str.charAt(i)]){
+				charObj[str.charAt(i)] = 1;
+			}
+			else{
+			 charObj[str.charAt(i)] += 1;
+			}
+		}
+		let maxNum=1;
+		let maxChar='';
+		for(var k in charObj){
+			if(charObj[k]>=maxNum){
+			maxChar=k;
+			maxNum=charObj[k];
+			}
+		}
+		return maxChar;
+	}
+	let str="dgsddddsgeaaaaaaa";
+	result=maxDuplicateChar(str);
+	alert(result);
+```
